@@ -17,8 +17,9 @@ function addToCart(item) {
 function viewCart() {
   let returnedStatement;
   for (i=0; i<cart.length; i++){
-    let returnedDetails;
-    returnedDetails += `${cart[i].itemName} at $${cart[i].itemPrice}, `
+    if (i < cart.length-1){
+      let returnedDetails;
+      returnedDetails += `${cart[i].itemName} at $${cart[i].itemPrice}, `
   }
   returnedStatement = `In your cart, you have ${returnedDetails}`
 }

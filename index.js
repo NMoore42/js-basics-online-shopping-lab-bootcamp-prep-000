@@ -15,12 +15,15 @@ function addToCart(item) {
 }
 
 function viewCart() {
+  let returnedDetails;
   if (cart.length == 0){
     return "Your shopping cart is empty."
-  } else {
+  } else if (cart.length == 1){
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`;
+    }
+  {
     for (i=0; i<cart.length; i++){
       if (i < cart.length-1){
-        let returnedDetails;
         returnedDetails += `${cart[i].itemName} at $${cart[i].itemPrice}, `
       } else {
         returnedDetails += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`

@@ -23,9 +23,10 @@ function viewCart() {
       returnedDetails += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`
       }
     }
+    return`In your cart, you have ${returnedDetails}`;
   }
-  return`In your cart, you have ${returnedDetails}`;
-}
+  
+
 
 function total() {
   // write your code here

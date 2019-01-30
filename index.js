@@ -15,13 +15,16 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  let returnedStatement;
   for (i=0; i<cart.length; i++){
     if (i < cart.length-1){
       let returnedDetails;
       returnedDetails += `${cart[i].itemName} at $${cart[i].itemPrice}, `
+    } else {
+      returnedDetails += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`
+      }
+    }
   }
-  returnedStatement = `In your cart, you have ${returnedDetails}`
+  return`In your cart, you have ${returnedDetails}`;
 }
 
 function total() {

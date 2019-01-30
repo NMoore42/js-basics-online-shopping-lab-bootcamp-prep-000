@@ -18,9 +18,9 @@ function viewCart() {
   let returnedStatement;
   for (i=0; i<cart.length; i++){
     let returnedDetails;
-    returnedDetails += `${cart[i].itemName} at $${cart[i].itemPrice},`
+    returnedDetails += `${cart[i].itemName} at $${cart[i].itemPrice}, `
   }
-  returnedStatement = `
+  returnedStatement = `In your cart, you have ${returnedDetails}`
 }
 
 function total() {
